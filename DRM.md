@@ -65,3 +65,58 @@ La interfaz consume un modelo de dominio separado de la presentación.
 8. Estadística incorpora procedencia para impedir que una estimación parezca medición profesional.
 9. La UI no debe contener lógica de negocio crítica.
 10. Esta capa no agrega nuevas interacciones: prepara profundidad estructural para futuras versiones.
+
+
+## v1.3 — Dominio futbolístico profundo
+Esta versión profundiza el sistema interno sin agregar nuevas interacciones visibles.
+
+### Modelo de fútbol
+- **Unidades:** arquero, defensa, mediocampo y ataque.
+- **Zonas:** tercio defensivo, tercio medio, tercio final, carril central, intervalos y bandas.
+- **Fases:** inicio, progresión, finalización, organización defensiva, presión y transiciones.
+- **Comportamientos:** recibir, escanear, apoyar, cubrir, presionar, fijar, conectar y finalizar.
+- **Principios:** cada principio posee identidad propia, fases y unidades relacionadas.
+- **Roles tácticos:** conectan posición → fase → comportamiento → principio.
+- **Modelo táctico:** puede describir forma base, forma con balón y forma sin balón.
+- **Jugador:** ahora pertenece a una unidad y su perfil relaciona comportamientos, principios y zonas.
+- **Entrenamiento:** relaciona temporada → fases → comportamientos → principios → unidades → jugador.
+- **Partido:** incorpora plan colectivo, tareas por unidad, principios y estructura post-partido.
+- **Desarrollo:** prepara dimensiones y tipos de evidencia sin inventar mediciones.
+
+### Motor
+El ENGINE expone consultas reutilizables para que la futura aplicación no tenga que repetir lógica:
+- club / temporada;
+- jugador / unidad;
+- zonas / fases / comportamientos / principios;
+- perfil del jugador;
+- contexto táctico del jugador;
+- entrenamientos relacionados;
+- plan de partido;
+- historial.
+
+### Integridad
+La validación ahora controla:
+1. una única temporada activa;
+2. referencias de unidades;
+3. posiciones válidas;
+4. números de camiseta sin duplicados;
+5. arquetipos existentes;
+6. perfiles vinculados;
+7. principios, fases, comportamientos y zonas existentes;
+8. roles tácticos completos;
+9. formaciones con principios existentes;
+10. entrenamientos con referencias válidas;
+11. capitán y misiones de partido válidos;
+12. tareas del plan asignadas a unidades existentes;
+13. estructura post-partido preparada.
+
+### Regla de producto
+**La interfaz no se expande por tener más datos.**
+La profundidad se construye detrás de la pantalla. Cuando llegue una futura capa de interacción, deberá consumir este dominio en lugar de volver a crear lógica paralela.
+
+### Estado v1.3
+- Interacción visible nueva: **ninguna**.
+- Profundidad estructural: **ampliada**.
+- Fuente de verdad: data.js.
+- Motor: engine.js.
+- Presentación: sin cambio conceptual.
