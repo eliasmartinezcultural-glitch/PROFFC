@@ -43,3 +43,25 @@ No introducir inicialmente backend, Vercel, chat, marketplace, economía virtual
 Objetivo emocional:
 “Esto parece profesional.”
 “Esto es mi equipo.”
+
+
+## v1.2 — Sistema de dominio
+La interfaz consume un modelo de dominio separado de la presentación.
+
+### Capas
+- **DATA:** club, temporada, plantel, staff, arquetipos, modelo táctico, perfiles, biblioteca de entrenamiento, partidos, estadísticas y procedencia.
+- **ENGINE:** referencias, selección de contexto activo, normalización, snapshot y validación.
+- **APP:** únicamente presenta el estado y conserva la navegación existente.
+- **STYLES:** capa visual independiente.
+
+### Principios estructurales
+1. Una sola fuente de verdad para los datos.
+2. Las relaciones se hacen mediante IDs, no mediante textos duplicados.
+3. Temporada es una entidad: permite historial y evolución futura.
+4. Jugador, perfil y evaluación son entidades separables.
+5. Modelo táctico define principios y roles reutilizables.
+6. Entrenamiento enlaza equipo → unidad → jugador.
+7. Partido enlaza temporada → rival → convocatoria → formación → misión.
+8. Estadística incorpora procedencia para impedir que una estimación parezca medición profesional.
+9. La UI no debe contener lógica de negocio crítica.
+10. Esta capa no agrega nuevas interacciones: prepara profundidad estructural para futuras versiones.

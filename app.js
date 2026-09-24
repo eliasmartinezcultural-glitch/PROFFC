@@ -1,5 +1,6 @@
-const TEAM={name:"9 FC",season:"2026",formation:"4–3–3",next:{opponent:"Rival FC",date:"SÁB 16:30",place:"Cancha principal"},player:{name:"ELÍAS",number:10,position:"MEDIOCAMPISTA",role:"Organizador"}};
-const PLAYERS=[["1","ARQUERO","Arquero"],["2","LATERAL","Lateral"],["4","CENTRAL","Central"],["5","CAPITÁN","Líder"],["6","VOLANTE","Volante"],["8","INTERIOR","Interior"],["10","ELÍAS","Organizador"],["7","EXTREMO","Extremo"],["9","DELANTERO","Finalizador"]];
+const MODEL=YF_ENGINE.snapshot();
+const TEAM={name:MODEL.club.name,season:MODEL.season.name.replace("Temporada ",""),formation:MODEL.formation.name,next:{opponent:MODEL.match.opponentName,date:MODEL.match.dateLabel,place:MODEL.match.venue},player:{name:MODEL.player.name,number:MODEL.player.number,position:"MEDIOCAMPISTA",role:MODEL.profile?.role||MODEL.playerLabel}};
+const PLAYERS=MODEL.squad.map(p=>[String(p.number),p.name,p.role]);
 const app=document.querySelector("#app"),navButtons=[...document.querySelectorAll("[data-nav]")];let current="club";let soundOn=true;let renderToken=0;
 const toast=(msg)=>{let t=document.querySelector(".toast");if(!t){t=document.createElement("div");t.className="toast";document.body.append(t)}t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)};
 const squad=()=>PLAYERS.map(([n,name,role])=>`<article class="player-card" data-number="${n}"><div class="avatar">#${n}</div><strong>${name}</strong><small>${role}</small></article>`).join("");
