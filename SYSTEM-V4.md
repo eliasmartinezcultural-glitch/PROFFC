@@ -1,0 +1,1 @@
+# YO FUTBOLISTA 4.0\n\nMotor: datos → relaciones → validación → experiencia → interfaz.\n\nDominios: ficha del jugador, ciclo del partido, estado, convocatoria preparada, identidad, temporada e historial.\n\nRegla: no inventar datos deportivos. La interfaz móvil solo muestra la información necesaria.
