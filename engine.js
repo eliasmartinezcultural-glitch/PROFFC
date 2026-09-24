@@ -1,12 +1,12 @@
 /* YO FUTBOLISTA — DOMAIN ENGINE v1.3
    Consulta, normaliza y valida el dominio futbolístico. No controla la UI.
 */
-window.YF_ENGINE=(()=>{
+window.YF_ENGINE=(()=>{\n /* v1.4: liderazgo real puede pertenecer a staff y no requiere ser un jugador registrado. */
  const D=window.YF_DATA;
  const index=(items,key="id")=>Object.fromEntries((items||[]).map(x=>[x[key],x]));
  const players=index(D.players),seasons=index(D.seasons),models=index(D.tacticalModels),units=index(D.units),
        zones=index(D.zones),phases=index(D.phases),behaviors=index(D.behaviors),principles=index(D.principles),
-       archetypes=D.archetypes;
+       archetypes=D.archetypes,staff=index(D.staff);
  const currentSeason=()=>seasons[D.club.seasonId];
  const currentPlayer=()=>D.players.find(p=>p.isCurrentUser)||D.players[0];
  const currentProfile=()=>D.playerProfiles.find(p=>p.playerId===currentPlayer().id&&p.seasonId===D.club.seasonId);
@@ -63,7 +63,7 @@ window.YF_ENGINE=(()=>{
   });
   D.matches.forEach(m=>{
     assert(seasons[m.seasonId]&&models[m.formationId],"partido sin referencias");
-    assert(players[m.captainId],"capitán de partido inexistente");
+    assert(staff[m.captainId],"capitán de partido inexistente");
     Object.keys(m.playerMissions||{}).forEach(id=>assert(players[id],"misión de jugador inexistente: "+id));
     assertIds(m.plan?.principleIds,principles,"principio de plan");
     Object.keys(m.plan?.unitTasks||{}).forEach(id=>assert(units[id],"unidad de tarea inexistente: "+id));

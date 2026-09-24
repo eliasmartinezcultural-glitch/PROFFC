@@ -4,7 +4,7 @@
    Regla: dato confirmado ≠ informado ≠ pendiente ≠ estimado.
 */
 window.YF_DATA = {
-  schema:"yo-futbolista/1.4",
+  schema:"yo-futbolista/1.3",
   app:{name:"YO FUTBOLISTA",mode:"team-first",locale:"es-AR"},
   club:{
     id:"club-9fc",name:"9 FC",shortName:"9",seasonId:"season-2026",
@@ -226,7 +226,7 @@ window.YF_DATA = {
       venueId:"venue-andalhue-c1",venue:"Complejo Andalhue · Cancha 1",field:"Cancha 1",
       arrival:"5 minutos antes",transport:"propio",
       preMatch:["vestirse","calentar","jugar"],
-      lockerRoom:false,captainId:"p-vasquez",formationId:"model-6v6-flex",
+      lockerRoom:false,captainId:"staff-cap-01",formationId:"model-6v6-flex",
       plan:{objectiveId:"obj-team-01",principleIds:["principle-team-connection","principle-transition-press"],unitTasks:{}},
       playerMissions:{"p-10":"Delantero / tres cuartos: desequilibrar, generar oportunidades y recibir una ubicación clara del equipo."},
       postMatch:{teamReview:"reunión informal después del partido",playerReviews:[],stats:[]},
@@ -239,7 +239,7 @@ window.YF_DATA = {
       venueId:"venue-andalhue-c1",venue:"Complejo Andalhue · Cancha 1",field:"Cancha 1",
       arrival:"5 minutos antes",transport:"propio",
       preMatch:["vestirse","calentar","jugar"],
-      lockerRoom:false,captainId:"p-vasquez",formationId:"model-6v6-flex",
+      lockerRoom:false,captainId:"staff-cap-01",formationId:"model-6v6-flex",
       plan:{objectiveId:"obj-team-01",principleIds:["principle-team-connection","principle-transition-press"],unitTasks:{}},
       playerMissions:{"p-10":"Delantero / tres cuartos: desequilibrar, generar oportunidades y recibir una ubicación clara del equipo."},
       postMatch:{teamReview:"reunión informal después del partido",playerReviews:[],stats:[]},
