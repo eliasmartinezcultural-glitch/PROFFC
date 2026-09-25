@@ -1,6 +1,6 @@
 window.YF_DATA={
-schema:"yo-futbolista/3.1",
-version:"3.1",
+schema:"yo-futbolista/3.2",
+version:"3.2",
 product:{id:"yo-futbolista",name:"YO FUTBOLISTA",version:"3.1",promise:"Mi equipo. Mi partido. Mi fútbol.",release:"Club profesional · sistema colectivo"},
 club:{id:"sin9fc",name:"SIN 9 FC",shortName:"SIN 9",city:"San Patricio del Chañar",province:"Neuquén",country:"Argentina",sport:"Fútbol 6",colors:{primary:"#1769ff",secondary:"#05070b"},crest:{status:"pending"}},
 season:{id:"interbarrial-clausura-2026",competition:"Interbarrial",stage:"Clausura",year:2026,status:"active"},
@@ -53,6 +53,6 @@ seasonMetrics:{matches:"No informado",wins:"No informado",draws:"No informado",l
 teamRoles:{captain:"sebastian-vasquez",viceCaptain:null,staff:[]},
 matchExperience:{headline:"Día de partido",subline:"Todo empieza antes de entrar a la cancha.",stages:["Convocatoria","Preparación","Llegada","Calentamiento","Partido","Cierre"]},
 media:{heroStatus:"placeholder",galleryStatus:"No informada"},
-release:{version:"3.1",status:"stable",lockedStructure:true,lockedFunctional:true,workPolicy:"Solo personalización, interacción, experiencia y carga de contenido",integrity:"No inventar datos deportivos",editableDomains:["playerProfiles","playerMedia","playerDocuments","playerSelfData","teamMedia","clubStory","matchMedia"]},
-contentModel:{playerMedia:{photos:[],videos:[],documents:[]},playerDocuments:[],playerSelfData:{},teamMedia:{photos:[],videos:[],documents:[]},clubStory:[],matchMedia:{}}
+release:{version:"3.2",status:"stable",lockedStructure:true,lockedFunctional:true,workPolicy:"Solo personalización, interacción, experiencia y carga de contenido",integrity:"No inventar datos deportivos",editableDomains:["playerProfiles","playerMedia","playerDocuments","playerSelfData","teamMedia","clubStory","matchMedia"]},
+contentModel:{playerMedia:{photos:[],videos:[],documents:[]},playerDocuments:[],playerSelfData:{},teamMedia:{photos:[],videos:[],documents:[]},clubStory:[],matchMedia:{},playerExperience:{editableFields:["nickname","bio","foot","role","archetype","strength","developmentGoal","teamNeed","favoriteMemory","favoritePosition","availabilityNote"],mediaFields:["photo","gallery","videoLinks","documentLinks"],persistence:"browser-local",privacy:"contenido personal del jugador, no inventado por el sistema"}}
 };
