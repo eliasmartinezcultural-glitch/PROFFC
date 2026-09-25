@@ -53,5 +53,6 @@ seasonMetrics:{matches:"No informado",wins:"No informado",draws:"No informado",l
 teamRoles:{captain:"sebastian-vasquez",viceCaptain:null,staff:[]},
 matchExperience:{headline:"Día de partido",subline:"Todo empieza antes de entrar a la cancha.",stages:["Convocatoria","Preparación","Llegada","Calentamiento","Partido","Cierre"]},
 media:{heroStatus:"placeholder",galleryStatus:"No informada"},
-release:{version:"3.1",status:"stable",lockedStructure:true,integrity:"No inventar datos deportivos"}
+release:{version:"3.1",status:"stable",lockedStructure:true,lockedFunctional:true,workPolicy:"Solo personalización, interacción, experiencia y carga de contenido",integrity:"No inventar datos deportivos",editableDomains:["playerProfiles","playerMedia","playerDocuments","playerSelfData","teamMedia","clubStory","matchMedia"]},
+contentModel:{playerMedia:{photos:[],videos:[],documents:[]},playerDocuments:[],playerSelfData:{},teamMedia:{photos:[],videos:[],documents:[]},clubStory:[],matchMedia:{}}
 };
