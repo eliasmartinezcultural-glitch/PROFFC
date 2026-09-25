@@ -41,4 +41,13 @@ rules:[
 {id:"r1",text:"No fumar durante la concentración."},{id:"r2",text:"No salir de concentración."},{id:"r3",text:"No dejar cuotas impagas."},{id:"r4",text:"No asistir lesionado."},{id:"r5",text:"No confirmar y no presentarse."},{id:"r6",text:"No jugar otro equipo en el mismo horario."},{id:"r7",text:"No llegar en jeans."}
 ],
 dataPolicy:{inventStats:false,inventPlayers:false,inventNumbers:false,inventResults:false,inventFormation:false,unknownState:"Mostrar como no informado"},matchCycle:[{id:"confirmed",label:"CONFIRMADO"},{id:"prepare",label:"PREPARAR"},{id:"arrival",label:"LLEGAR"},{id:"warmup",label:"CALENTAR"},{id:"play",label:"JUGAR"},{id:"close",label:"CERRAR"}],playerState:{current:"disponible",source:"manual"},convocations:[],history:{seasonId:"interbarrial-clausura-2026",entries:[]},teamIdentity:{motto:"Mi equipo. Mi partido. Mi fútbol.",crestStatus:"En diseño",values:["Compañerismo","Compromiso","Competencia"]}
+,
+clubProfile:{
+  founded:"No informado", identity:"Equipo de amigos que compite como club", homeGround:"Complejo Andalhue · Cancha 1", colorsLabel:"Azul · Negro", crestMeaning:"Identidad en construcción"
+},
+clubSections:["INICIO","PARTIDOS","EQUIPO","TEMPORADA","HISTORIA"],
+seasonMetrics:{matches:"No informado",wins:"No informado",draws:"No informado",losses:"No informado",goalsFor:"No informado",goalsAgainst:"No informado",points:"No informado"},
+teamRoles:{captain:"sebastian-vasquez",viceCaptain:null,staff:[]},
+matchExperience:{headline:"Día de partido",subline:"Todo empieza antes de entrar a la cancha.",stages:["Convocatoria","Preparación","Llegada","Calentamiento","Partido","Cierre"]},
+media:{heroStatus:"placeholder",galleryStatus:"No informada"}
 };
